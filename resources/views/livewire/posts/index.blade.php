@@ -36,8 +36,7 @@ Data Posts - Belajar Livewire 3 di SantriKoding.com
                                 <td>{!! $post->content !!}</td>
                                 <td class="text-center">
                                     <a href="/edit/{{ $post->id }}" wire:navigate class="btn btn-sm btn-primary">EDIT</a>
-                                    <button class="btn btn-sm btn-danger">DELETE</button>
-                                </td>
+                                    <button wire:click="destroy({{ $post->id }})" class="btn btn-sm btn-danger">DELETE</button>                                </td>
                             </tr>
                             @empty
                             <div class="alert alert-danger">
